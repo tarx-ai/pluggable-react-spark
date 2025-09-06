@@ -1,7 +1,7 @@
 // Design System Components
-export { Button } from "./button";
-export { Input } from "./input";
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "./card";
-export { Badge } from "./badge";
-export { Switch } from "./switch";
-export { Checkbox } from "./checkbox";
+export { Button } from "./Button";
+export { Input } from "./Input";
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "./Card";
+export { Badge } from "./Badge";
+export { Switch } from "./Switch";
+export { Checkbox } from "./Checkbox";
