@@ -1,32 +1,66 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
-import Layout from "./components/Layout";
-import Main from "./templates/HomePage/Main";
+import { Routes, Route, Link } from "react-router-dom";
 
-const queryClient = new QueryClient();
+function Home() {
+  return (
+    <main style={{ padding: 24 }}>
+      <h1>TARX (Vite)</h1>
+      <nav style={{ display: "flex", gap: 12 }}>
+        <Link to="/">Home</Link>
+        <Link to="/features">Features</Link>
+        <Link to="/ops">Ops</Link>
+      </nav>
+      <div style={{ marginTop: 24 }}>
+        <h2>Welcome to TARX</h2>
+        <p>Your AI-powered workspace is ready.</p>
+      </div>
+    </main>
+  );
+}
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout><Main /></Layout>} />
-          <Route path="/ops" element={<Layout><div className="p-6"><h1 className="text-2xl font-bold">TARX Ops Dashboard</h1><p className="text-muted-foreground">Manage your TARX workspace</p></div></Layout>} />
-          <Route path="/search" element={<Layout><div className="p-6"><h1 className="text-2xl font-bold">Search</h1><p className="text-muted-foreground">Search your TARX workspace</p></div></Layout>} />
-          <Route path="/settings" element={<Layout><div className="p-6"><h1 className="text-2xl font-bold">Settings</h1><p className="text-muted-foreground">TARX settings</p></div></Layout>} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+function Features() {
+  return (
+    <main style={{ padding: 24 }}>
+      <h1>Features</h1>
+      <nav style={{ display: "flex", gap: 12 }}>
+        <Link to="/">Home</Link>
+        <Link to="/features">Features</Link>
+        <Link to="/ops">Ops</Link>
+      </nav>
+      <div style={{ marginTop: 24 }}>
+        <h2>TARX Features</h2>
+        <ul>
+          <li>AI-powered coding assistance</li>
+          <li>Real-time collaboration</li>
+          <li>Advanced workspace management</li>
+        </ul>
+      </div>
+    </main>
+  );
+}
 
-export default App;
+function Ops() {
+  return (
+    <main style={{ padding: 24 }}>
+      <h1>TARX Ops Dashboard</h1>
+      <nav style={{ display: "flex", gap: 12 }}>
+        <Link to="/">Home</Link>
+        <Link to="/features">Features</Link>
+        <Link to="/ops">Ops</Link>
+      </nav>
+      <div style={{ marginTop: 24 }}>
+        <h2>Operations</h2>
+        <p>Manage your TARX workspace</p>
+      </div>
+    </main>
+  );
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/features" element={<Features />} />
+      <Route path="/ops" element={<Ops />} />
+    </Routes>
+  );
+}
