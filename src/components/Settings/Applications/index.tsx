@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import Application from "./Application";
 
 import { applications } from "@/mocks/applications";

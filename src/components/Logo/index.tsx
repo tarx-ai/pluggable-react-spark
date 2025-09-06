@@ -1,5 +1,5 @@
-import Link from "next/link";
-import Image from "next/image";
+import { Link } from "react-router-dom";
+import Image from "@/components/Image";
 
 type LogoProps = {
     className?: string;

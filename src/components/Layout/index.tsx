@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
 import { enablePageScroll, clearQueueScrollLocks } from "scroll-lock";
-import Head from "next/head";
+// import Head from "next/head"; // Removed for Vite
 import { useMediaQuery } from "react-responsive";
 import LeftSidebar from "@/components/LeftSidebar";
 import RightSidebar from "@/components/RightSidebar";

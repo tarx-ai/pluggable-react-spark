@@ -15,7 +15,7 @@
  * - Updated user name and email to John Doe / john@tarx.ai
  */
 
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import Image from "@/components/Image";
 import Icon from "@/components/Icon";
 import AbstractAvatar from "@/components/AbstractAvatar";

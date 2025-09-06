@@ -1,7 +1,7 @@
 "use client";
 
 import { Tab } from "@headlessui/react";
-import { useRouter } from "next/navigation";
+import { useNavigate } from "react-router-dom";
 import Layout from "@/components/Layout";
 import Icon from "@/components/Icon";
 import Updates from "./Updates";

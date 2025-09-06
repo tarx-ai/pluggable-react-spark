@@ -1,5 +1,5 @@
-import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
 import Icon from "@/components/Icon";
 

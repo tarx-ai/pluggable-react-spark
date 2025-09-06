@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useNavigate } from "react-router-dom";
 import Layout from "@/components/Layout";
 import Icon from "@/components/Icon";
 import Application from "./Application";

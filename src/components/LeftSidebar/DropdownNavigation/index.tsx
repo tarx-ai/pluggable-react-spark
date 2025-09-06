@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
 import Icon from "@/components/Icon";
 

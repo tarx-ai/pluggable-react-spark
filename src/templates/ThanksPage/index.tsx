@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import Icon from "@/components/Icon";
 import Menu from "@/components/Menu";

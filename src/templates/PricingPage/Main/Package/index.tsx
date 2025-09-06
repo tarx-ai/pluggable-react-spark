@@ -1,5 +1,5 @@
 import { twMerge } from "tailwind-merge";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import Icon from "@/components/Icon";
 
 type PackageProps = {

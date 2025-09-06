@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import Icon from "@/components/Icon";
 
 import { navigation } from "@/constants/navigation";
