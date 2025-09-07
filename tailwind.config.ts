@@ -6,10 +6,7 @@ const config: Config = {
     darkMode: ["class", '[data-theme="dark"]'],
     content: [
         "./index.html",
-        "./app/**/*.{js,ts,jsx,tsx,mdx}",
-        "./src/**/*.{js,ts,jsx,tsx}",
-        "./templates/**/*.{js,ts,jsx,tsx}",
-        "./components/**/*.{js,ts,jsx,tsx,mdx}",
+        "./{app,src,components,templates}/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
         screens: {
