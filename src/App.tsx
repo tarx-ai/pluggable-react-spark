@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
-import { Layout } from "@/components/Layout";
+import TarxChatInterface from "@/components/TarxChatInterface";
 import NotFound from "./pages/NotFound";
 
-// Import actual TARX page components from app directory
+// Import actual TARX page components from app directory  
 import HomePage from "../app/(shell)/page";
 import ApplicationsPage from "../app/applications/page";
 import AudioGenerationPage from "../app/audio-generation/page";
@@ -24,24 +24,24 @@ import DesignSystemPage from "../app/design-system/page";
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<Layout><HomePage /></Layout>} />
-      <Route path="/applications" element={<Layout><ApplicationsPage /></Layout>} />
-      <Route path="/audio-generation" element={<Layout><AudioGenerationPage /></Layout>} />
-      <Route path="/code-generation" element={<Layout><CodeGenerationPage /></Layout>} />
-      <Route path="/video-generation" element={<Layout><VideoGenerationPage /></Layout>} />
-      <Route path="/photo-editing" element={<Layout><PhotoEditingPage /></Layout>} />
-      <Route path="/generation-socials-post" element={<Layout><GenerationSocialsPostPage /></Layout>} />
-      <Route path="/education-feedback" element={<Layout><EducationFeedbackPage /></Layout>} />
-      <Route path="/checkout" element={<Layout><CheckoutPage /></Layout>} />
-      <Route path="/pricing" element={<Layout><PricingPage /></Layout>} />
-      <Route path="/sign-in" element={<Layout><SignInPage /></Layout>} />
-      <Route path="/thanks" element={<Layout><ThanksPage /></Layout>} />
-      <Route path="/updates-and-faq" element={<Layout><UpdatesAndFaqPage /></Layout>} />
-      <Route path="/workspace" element={<Layout><WorkspacePage /></Layout>} />
-      <Route path="/pagelist" element={<Layout><PageListPage /></Layout>} />
-      <Route path="/features" element={<Layout><FeaturesPage /></Layout>} />
-      <Route path="/design-system" element={<Layout><DesignSystemPage /></Layout>} />
-      <Route path="*" element={<Layout><NotFound /></Layout>} />
+      <Route path="/" element={<TarxChatInterface />} />
+      <Route path="/applications" element={<ApplicationsPage />} />
+      <Route path="/audio-generation" element={<AudioGenerationPage />} />
+      <Route path="/code-generation" element={<CodeGenerationPage />} />
+      <Route path="/video-generation" element={<VideoGenerationPage />} />
+      <Route path="/photo-editing" element={<PhotoEditingPage />} />
+      <Route path="/generation-socials-post" element={<GenerationSocialsPostPage />} />
+      <Route path="/education-feedback" element={<EducationFeedbackPage />} />
+      <Route path="/checkout" element={<CheckoutPage />} />
+      <Route path="/pricing" element={<PricingPage />} />
+      <Route path="/sign-in" element={<SignInPage />} />
+      <Route path="/thanks" element={<ThanksPage />} />
+      <Route path="/updates-and-faq" element={<UpdatesAndFaqPage />} />
+      <Route path="/workspace" element={<WorkspacePage />} />
+      <Route path="/pagelist" element={<PageListPage />} />
+      <Route path="/features" element={<FeaturesPage />} />
+      <Route path="/design-system" element={<DesignSystemPage />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
