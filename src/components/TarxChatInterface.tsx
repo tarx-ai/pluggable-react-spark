@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Send, Paperclip, Plus, X, Search, Share2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 interface Tab {
   id: string;
@@ -114,10 +115,13 @@ const TarxChatInterface: React.FC = () => {
             </button>
           </div>
           <div className="flex items-center space-x-2">
-            <button className="flex items-center space-x-2 px-3 py-1.5 bg-[#1C1C1E] rounded-lg hover:bg-[#2C2C2E] text-sm">
-              <Share2 className="w-4 h-4" />
-              <span>Share</span>
-            </button>
+            <Button 
+              variant="secondary" 
+              size="sm"
+              leftIcon={<Share2 className="w-4 h-4" />}
+            >
+              Share
+            </Button>
           </div>
         </div>
 
@@ -143,9 +147,13 @@ const TarxChatInterface: React.FC = () => {
                 </button>
               </div>
             ))}
-            <button className="flex items-center justify-center w-10 h-12 border-r border-[#1C1C1E] hover:bg-[#1C1C1E]">
+            <Button 
+              variant="ghost" 
+              size="icon"
+              className="w-10 h-12 border-r border-[#1C1C1E] hover:bg-[#1C1C1E] rounded-none"
+            >
               <Plus className="w-4 h-4" />
-            </button>
+            </Button>
           </div>
         </div>
 
@@ -165,9 +173,13 @@ const TarxChatInterface: React.FC = () => {
         {/* Input Area */}
         <div className="border-t border-[#1C1C1E] p-4">
           <div className="flex items-end space-x-3">
-            <button className="p-2 hover:bg-[#1C1C1E] rounded-lg">
+            <Button 
+              variant="ghost" 
+              size="icon"
+              className="p-2 hover:bg-[#1C1C1E] rounded-lg"
+            >
               <Paperclip className="w-5 h-5" />
-            </button>
+            </Button>
             
             <div className="flex-1 min-h-[44px] max-h-32 bg-[#1C1C1E] rounded-lg border border-[#2C2C2E] focus-within:border-[#0A84FF]">
               <textarea
@@ -180,12 +192,14 @@ const TarxChatInterface: React.FC = () => {
               />
             </div>
             
-            <button 
+            <Button 
               onClick={handleSendMessage}
+              variant="ghost" 
+              size="icon"
               className="p-2 hover:bg-[#1C1C1E] rounded-lg"
             >
               <Send className="w-5 h-5" />
-            </button>
+            </Button>
           </div>
           
           <div className="flex items-center justify-between mt-3 text-xs text-[#8E8E93]">
