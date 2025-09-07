@@ -1,6 +1,5 @@
-'use client';
-import React from 'react';
+import * as React from "react";
 
-export function Providers({ children }: { children: React.ReactNode }) {
+export default function Providers({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
