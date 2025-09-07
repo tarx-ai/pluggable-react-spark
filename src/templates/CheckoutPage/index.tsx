@@ -1,6 +1,6 @@
 "use client";
 
-import Layout from "@/components/Layout";
+import { Layout } from "@/components/Layout";
 import Details from "./Details";
 import Form from "./Form";
 

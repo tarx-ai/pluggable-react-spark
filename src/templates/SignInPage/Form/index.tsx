@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Tab } from "@headlessui/react";
-import { useColorMode } from "@chakra-ui/react";
+import { useTheme } from "next-themes";
 import Logo from "@/components/Logo";
 import Image from "@/components/Image";
 import SignIn from "./SignIn";
@@ -14,8 +14,8 @@ type FormProps = {};
 const Form = ({}: FormProps) => {
     const [forgot, setForgot] = useState<boolean>(false);
 
-    const { colorMode } = useColorMode();
-    const isLightMode = colorMode === "light";
+    const { theme, resolvedTheme } = useTheme();
+    const isLightMode = (resolvedTheme ?? theme) === "light";
 
     return (
         <div className="w-full max-w-[31.5rem] m-auto">

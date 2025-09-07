@@ -1,5 +1,5 @@
 // Design System Components
-export { Button, buttonVariants } from "./button";
+export { Button, buttonVariants, type ButtonProps } from "./button";
 export { Input } from "./input";
 export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "./card";
 export { Badge } from "./badge";

@@ -2,7 +2,7 @@
 
 import { Tab } from "@headlessui/react";
 import { useNavigate } from "react-router-dom";
-import Layout from "@/components/Layout";
+import { Layout } from "@/components/Layout";
 import Icon from "@/components/Icon";
 import Updates from "./Updates";
 import Faq from "./Faq";
@@ -13,14 +13,14 @@ import { faqs } from "@/mocks/faq";
 const tanNavigation = ["Updates", "FAQ"];
 
 const UpdatesAndFaqPage = () => {
-    const router = useRouter();
+    const navigate = useNavigate();
 
     return (
         <Layout hideRightSidebar>
             <div className="p-20 2xl:px-10 md:pt-6 md:px-6 md:pb-10">
                 <button
                     className="hidden absolute top-6 right-6 w-10 h-10 border-2 border-n-4/25 rounded-full text-0 transition-colors hover:border-transparent hover:bg-n-4/25 md:block"
-                    onClick={() => router.back()}
+                    onClick={() => navigate(-1)}
                 >
                     <Icon className="fill-n-4" name="close" />
                 </button>

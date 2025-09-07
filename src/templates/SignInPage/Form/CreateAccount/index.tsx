@@ -37,14 +37,14 @@ const CreateAccount = ({}: CreateAccountProps) => {
                 By creating an account, you agree to our{" "}
                 <Link
                     className="text-n-5 transition-colors hover:text-n-7 dark:text-n-3 dark:hover:text-n-1"
-                    href="/"
+                    to="/"
                 >
                     Terms of Service
                 </Link>{" "}
                 and{" "}
                 <Link
                     className="text-n-5 transition-colors hover:text-n-7 dark:text-n-3 dark:hover:text-n-1"
-                    href="/"
+                    to="/"
                 >
                     Privacy & Cookie Statement
                 </Link>

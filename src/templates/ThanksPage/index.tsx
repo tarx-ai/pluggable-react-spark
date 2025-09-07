@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from "react-router-dom";
-import Layout from "@/components/Layout";
+import { Layout } from "@/components/Layout";
 import Icon from "@/components/Icon";
 import Menu from "@/components/Menu";
 
@@ -27,11 +27,11 @@ const ThanksPage = () => {
                         <div className="flex xl:block lg:flex lg:space-x-4 md:block md:space-x-0 md:space-y-3">
                             <Link
                                 className="btn-stroke-light mr-3 xl:w-full xl:mr-0 xl:mb-4 lg:mb-0"
-                                href="/pricing"
+                                to="/pricing"
                             >
                                 Manage subscription
                             </Link>
-                            <Link className="btn-blue xl:w-full" href="/">
+                            <Link className="btn-blue xl:w-full" to="/">
                                 Start new chat
                             </Link>
                         </div>

@@ -1,4 +1,4 @@
-import { useColorMode } from "@chakra-ui/react";
+import { useTheme } from "next-themes";
 import Icon from "@/components/Icon";
 import Image from "@/components/Image";
 
@@ -17,8 +17,8 @@ type UpdatesProps = {
 };
 
 const Updates = ({ items }: UpdatesProps) => {
-    const { colorMode } = useColorMode();
-    const isDarkMode = colorMode === "dark";
+    const { theme, resolvedTheme } = useTheme();
+    const isDarkMode = (resolvedTheme ?? theme) === "dark";
 
     return (
         <>

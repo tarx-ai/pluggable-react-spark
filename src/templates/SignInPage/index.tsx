@@ -33,7 +33,7 @@ const SignInPage = () => {
             </div>
             <Link
                 className="group absolute top-12 right-12 flex justify-center items-center w-10 h-10 bg-n-2 rounded-full text-0 transition-colors hover:bg-primary-1 md:top-6 md:right-6"
-                href="/"
+                to="/"
             >
                 <Icon
                     className="fill-n-7 transition-colors group-hover:fill-n-1"

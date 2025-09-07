@@ -4,9 +4,12 @@ import { TopBar } from "@/components/shell/TopBar";
 
 interface LayoutProps {
   children: React.ReactNode;
+  hideRightSidebar?: boolean;
+  smallSidebar?: boolean;
+  backUrl?: string;
 }
 
-export function Layout({ children }: LayoutProps) {
+export function Layout({ children, hideRightSidebar, smallSidebar, backUrl }: LayoutProps) {
   return (
     <SidebarProvider>
       <div className="min-h-screen flex w-full bg-background">

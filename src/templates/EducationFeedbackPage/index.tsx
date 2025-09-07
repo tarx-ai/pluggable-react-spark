@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Layout from "@/components/Layout";
+import { Layout } from "@/components/Layout";
 import Chat from "@/components/Chat";
 import Message from "@/components/Message";
 import Question from "@/components/Question";

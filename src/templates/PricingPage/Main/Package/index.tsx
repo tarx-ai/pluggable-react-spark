@@ -62,7 +62,7 @@ const Package = ({ plan, item }: PackageProps) => (
                 } ${
                     item.popular ? "btn-blue" : "btn-stroke-light"
                 } w-full mt-8`}
-                href="/checkout"
+                to="/checkout"
             >
                 {item.currentPlan ? "Current plan" : "Upgrade"}
             </Link>

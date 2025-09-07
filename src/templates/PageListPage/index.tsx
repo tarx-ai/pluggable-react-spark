@@ -63,7 +63,7 @@ const PageListPage = () => {
             {items.map((item, index) => (
                 <Link
                     className="text-n-1 transition-colors hover:text-primary-1 md:text-n-7 dark:text-n-1"
-                    href={item.url}
+                    to={item.url}
                     key={index}
                 >
                     {item.title}
