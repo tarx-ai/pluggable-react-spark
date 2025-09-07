@@ -7,7 +7,7 @@ type LogoProps = {
 };
 
 const Logo = ({ className, dark }: LogoProps) => (
-    <Link className={`flex items-center ${className}`} href="/">
+    <Link className={`flex items-center ${className}`} to="/">
         <div className="flex items-center gap-3">
             <div className="w-8 h-8 relative">
                 <Image

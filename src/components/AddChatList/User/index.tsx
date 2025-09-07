@@ -29,9 +29,10 @@ const User = ({ item }: UserProps) => {
         <div className="flex items-center mb-5 last:mb-0" key={item.id}>
             <div className="relative w-8 h-8 mr-3">
                 <Image
-                    className="object-cover rounded-full"
+                    className="w-full h-full object-cover rounded-full"
                     src={item.avatar}
-                    fill
+                    width={32}
+                    height={32}
                     alt="Avatar"
                 />
             </div>

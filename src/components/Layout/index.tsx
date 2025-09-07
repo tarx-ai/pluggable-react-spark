@@ -105,10 +105,10 @@ const Layout = ({
                                 />
                             )}
                             {hideRightSidebar && smallSidebar && (
-                                <Link
-                                    className="absolute top-6 right-6 flex justify-center items-center w-10 h-10 border-2 border-n-4/25 rounded-full text-0 transition-colors hover:border-transparent hover:bg-n-4/25"
-                                    href={backUrl || "/"}
-                                >
+                <Link
+                    className="absolute top-6 right-6 flex justify-center items-center w-10 h-10 border-2 border-n-4/25 rounded-full text-0 transition-colors hover:border-transparent hover:bg-n-4/25"
+                    to={backUrl || "/"}
+                >
                                     <Icon className="fill-n-4" name="close" />
                                 </Link>
                             )}

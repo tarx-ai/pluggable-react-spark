@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useColorMode } from "@chakra-ui/react";
+import { useTheme } from "next-themes";
 import { twMerge } from "tailwind-merge";
 import Image from "@/components/Image";
 import Select from "@/components/Select";
@@ -22,21 +22,21 @@ const languages = [
 type AppearanceProps = {};
 
 const Appearance = ({}: AppearanceProps) => {
-    const { colorMode, setColorMode } = useColorMode();
+    const { theme, setTheme } = useTheme();
     const [language, setLanguage] = useState<any>(languages[0]);
 
     const items = [
         {
             title: "Light mode",
             image: "/images/theme-light.svg",
-            active: colorMode === "light",
-            onClick: () => setColorMode("light"),
+            active: theme === "light",
+            onClick: () => setTheme("light"),
         },
         {
             title: "Dark mode",
             image: "/images/theme-dark.svg",
-            active: colorMode === "dark",
-            onClick: () => setColorMode("dark"),
+            active: theme === "dark",
+            onClick: () => setTheme("dark"),
         },
     ];
 

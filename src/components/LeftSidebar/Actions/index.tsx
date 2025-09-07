@@ -18,7 +18,7 @@ type ActionsProps = {
 };
 
 const Actions = ({ visible, items }: ActionsProps) => {
-    const pathname = usePathname();
+    const location = useLocation();
 
     return (
         <div className="mb-6">
@@ -56,12 +56,12 @@ const Actions = ({ visible, items }: ActionsProps) => {
                                 <Link
                                     className={twMerge(
                                         `flex items-center w-full h-10 rounded-lg text-n-3/75 base2 font-medium transition-colors hover:text-n-1 hover:bg-n-6/50 ${
-                                            pathname === item.url &&
+                                            location.pathname === item.url &&
                                             "text-n-1 bg-gradient-to-l from-[#323337] to-[rgba(80,62,110,0.29)]"
                                         }`
                                     )}
                                     key={item.id}
-                                    href={item.url}
+                                    to={item.url}
                                 >
                                     <div className="flex justify-center items-center w-5 h-5 mr-3">
                                         <Icon

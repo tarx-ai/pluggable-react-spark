@@ -9,10 +9,10 @@ const Adjust = ({ image }: AdjustProps) => (
     <div className="">
         <div className="relative h-48">
             <Image
-                className="mb-6 rounded-md object-cover"
+                className="w-full h-full mb-6 rounded-md object-cover"
                 src={image}
-                fill
-                sizes="(max-width: 768px) 100vw, 25vw"
+                width={300}
+                height={192}
                 alt=""
             />
         </div>

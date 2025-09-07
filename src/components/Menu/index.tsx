@@ -18,7 +18,7 @@ const Menu = ({ className, items }: MenuProps) => (
         {items.map((item, index) => (
             <Link
                 className="group flex items-center mb-5 p-3.5 border border-n-3 rounded-xl h6 transition-all hover:border-transparent hover:shadow-[0_0_1rem_0.25rem_rgba(0,0,0,0.04),0px_2rem_1.5rem_-1rem_rgba(0,0,0,0.12)] last:mb-0 2xl:p-2.5 lg:p-3.5 dark:border-n-5 dark:hover:border-n-7 dark:hover:bg-n-7"
-                href={item.url}
+                to={item.url}
                 key={index}
             >
                 <div className="relative flex justify-center items-center w-15 h-15 mr-6">

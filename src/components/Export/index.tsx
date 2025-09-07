@@ -27,9 +27,10 @@ const Export = ({ typeImage }: ExportProps) => {
                             <div className="relative shrink-0 flex items-center justify-center w-10 h-10 mr-4 rounded-full">
                                 {x.image && (
                                     <Image
-                                        className="object-contain"
+                                        className="w-full h-full object-contain"
                                         src={x.image}
-                                        fill
+                                        width={40}
+                                        height={40}
                                         alt=""
                                     />
                                 )}
