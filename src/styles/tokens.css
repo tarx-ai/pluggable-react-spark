@@ -1,0 +1,34 @@
+/* src/styles/tokens.css */
+:root {
+  /* surface */
+  --bg: #0f1115;             /* app background */
+  --panel: #12151b;          /* panel/raised */
+  --muted: #1a1f29;
+
+  /* text */
+  --fg: #e6e9ef;
+  --fg-muted: #aab0bc;
+
+  /* brand */
+  --brand: #6ea8fe;
+  --brand-600: #4f8dff;
+  --brand-700: #3a6de6;
+
+  /* borders */
+  --border: #2a3140;
+
+  /* semantic */
+  --success: #22c55e;
+  --warn: #f59e0b;
+  --danger: #ef4444;
+
+  /* radii */
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 14px;
+  --radius-pill: 999px;
+
+  /* shadows */
+  --shadow-1: 0 1px 2px rgba(0,0,0,.25);
+  --shadow-2: 0 6px 24px rgba(0,0,0,.35);
+}

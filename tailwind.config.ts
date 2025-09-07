@@ -8,9 +8,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
+        bg: "var(--bg)",
+        panel: "var(--panel)",
+        muted: "var(--muted)",
+        fg: "var(--fg)",
+        "fg-muted": "var(--fg-muted)",
+        brand: "var(--brand)",
+        "brand-600": "var(--brand-600)",
+        "brand-700": "var(--brand-700)",
+        border: "var(--border)",
+        success: "var(--success)",
+        warn: "var(--warn)",
+        danger: "var(--danger)",
+        // Keep existing shadcn tokens for compatibility
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
@@ -24,10 +34,6 @@ export default {
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",
@@ -51,11 +57,20 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
       },
       borderRadius: {
-        lg: "var(--radius)",
+        sm: "var(--radius-sm)",
+        DEFAULT: "var(--radius)",
+        lg: "var(--radius-lg)",
+        pill: "var(--radius-pill)",
+        // Keep existing for compatibility
         md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        1: "var(--shadow-1)",
+        2: "var(--shadow-2)",
       },
     },
   },

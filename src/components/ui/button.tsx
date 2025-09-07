@@ -1,93 +1,114 @@
-import React from "react";
+import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "@/lib/utils";
+import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
-const buttonVariants = cva(
-  "inline-flex items-center justify-center font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none rounded-lg relative",
+function cx(...args: any[]) {
+  return twMerge(clsx(args));
+}
+
+const buttonStyles = cva(
+  // base
+  "inline-flex items-center justify-center select-none whitespace-nowrap font-medium " +
+    "transition-colors outline-none ring-offset-0 active:scale-[.99] " +
+    "disabled:opacity-50 disabled:pointer-events-none",
   {
     variants: {
       variant: {
-        // Primary button - matches Figma primary color
-        default: "bg-[#0A84FF] text-white hover:bg-[#0056CC] focus:ring-[#0A84FF] shadow-sm",
-        // Secondary button  
-        secondary: "bg-[#1C1C1E] text-white hover:bg-[#2C2C2E] focus:ring-[#1C1C1E] border border-[#3A3A3C]",
-        // Subtle button
-        subtle: "bg-[#1C1C1E]/50 text-white hover:bg-[#1C1C1E] focus:ring-[#0A84FF]",
-        // Outline button
-        outline: "border-2 border-[#3A3A3C] bg-transparent text-white hover:bg-[#1C1C1E] hover:border-[#48484A] focus:ring-[#0A84FF]",
-        // Ghost button
-        ghost: "bg-transparent text-white hover:bg-[#1C1C1E] focus:ring-[#0A84FF]",
-        // Destructive button
-        destructive: "bg-[#FF453A] text-white hover:bg-[#D70015] focus:ring-[#FF453A] shadow-sm",
+        primary:
+          "bg-brand text-black hover:bg-brand-600 active:bg-brand-700 " +
+          "focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand",
+        secondary:
+          "bg-panel text-fg hover:bg-muted active:bg-muted/90 " +
+          "focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand",
+        subtle:
+          "bg-transparent text-fg hover:bg-muted/60 active:bg-muted " +
+          "border border-border " +
+          "focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand",
+        ghost:
+          "bg-transparent text-fg hover:bg-muted/40 active:bg-muted/60 " +
+          "focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand",
+        outline:
+          "bg-transparent text-fg hover:bg-muted/60 active:bg-muted " +
+          "border border-border " +
+          "focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand",
+        destructive:
+          "bg-danger text-white hover:bg-danger/90 active:bg-danger " +
+          "focus-visible:outline focus-visible:outline-2 focus-visible:outline-danger",
       },
       size: {
-        sm: "h-8 px-3 text-sm gap-1.5",
-        md: "h-10 px-4 text-sm gap-2", 
-        lg: "h-12 px-6 text-base gap-2",
-        icon: "h-10 w-10",
+        xs: "h-7 px-2 text-[12.5px] rounded-sm gap-1",
+        sm: "h-8 px-3 text-sm rounded-sm gap-1.5",
+        md: "h-9 px-3.5 text-[15px] rounded-md gap-2",
+        lg: "h-11 px-5 text-base rounded-lg gap-2",
+        icon: "h-9 w-9 rounded-md",
+      },
+      radius: {
+        sm: "rounded-sm",
+        md: "rounded-md",
+        lg: "rounded-lg",
+        pill: "rounded-pill",
+      },
+      shadow: {
+        none: "",
+        1: "shadow-1",
+        2: "shadow-2",
       },
     },
+    compoundVariants: [
+      // subtle + border emphasis on hover
+      {
+        variant: "subtle",
+        class: "hover:border-fg-muted",
+      },
+    ],
     defaultVariants: {
-      variant: "default",
+      variant: "primary",
       size: "md",
+      radius: "md",
+      shadow: "none",
     },
   }
 );
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
-  isLoading?: boolean;
+    VariantProps<typeof buttonStyles> {
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
+  isLoading?: boolean;
 }
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, isLoading, children, disabled, leftIcon, rightIcon, ...props }, ref) => {
+export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant, size, radius, shadow, leftIcon, rightIcon, children, isLoading, disabled, ...props }, ref) => {
     return (
       <button
-        className={cn(
-          buttonVariants({ variant, size }),
-          // Add 4px spacing around button content when not icon-only
-          size !== "icon" && "p-1",
-          className
-        )}
         ref={ref}
+        className={cx(buttonStyles({ variant, size, radius, shadow }), className)}
         disabled={disabled || isLoading}
         {...props}
       >
-        <div className={cn(
-          "flex items-center justify-center w-full h-full",
-          // Inner content area with proper spacing
-          size !== "icon" && "px-3 py-1 gap-2"
-        )}>
-          {isLoading ? (
-            <div className="w-4 h-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
-          ) : (
-            <>
-              {leftIcon && (
-                <span className="flex-shrink-0">
-                  {leftIcon}
-                </span>
-              )}
-              {children && (
-                <span className="text-center flex-1 whitespace-nowrap">
-                  {children}
-                </span>
-              )}
-              {rightIcon && (
-                <span className="flex-shrink-0">
-                  {rightIcon}
-                </span>
-              )}
-            </>
-          )}
-        </div>
+        {isLoading ? (
+          <div className="w-4 h-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
+        ) : (
+          <>
+            {leftIcon ? <span className="-ml-0.5">{leftIcon}</span> : null}
+            {children}
+            {rightIcon ? <span className="-mr-0.5">{rightIcon}</span> : null}
+          </>
+        )}
       </button>
     );
   }
 );
-
 Button.displayName = "Button";
 
-export { Button, buttonVariants };
+export const IconButton = React.forwardRef<HTMLButtonElement, Omit<ButtonProps, "children">>(
+  ({ className, variant = "ghost", size = "icon", ...props }, ref) => {
+    return <Button ref={ref} variant={variant} size={size} className={className} {...props} />;
+  }
+);
+IconButton.displayName = "IconButton";
+
+// Legacy export for compatibility
+export { buttonStyles as buttonVariants };
