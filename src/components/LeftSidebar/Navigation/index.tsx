@@ -17,7 +17,8 @@ type NavigationProps = {
 };
 
 const Navigation = ({ visible, items }: NavigationProps) => {
-    const pathname = usePathname();
+    const location = useLocation();
+    const pathname = location.pathname;
 
     return (
         <div className={`${visible && "px-2"}`}>
@@ -30,7 +31,7 @@ const Navigation = ({ visible, items }: NavigationProps) => {
                                 "text-n-1 bg-gradient-to-l from-[#323337] to-[rgba(70,79,111,0.3)] shadow-[inset_0px_0.0625rem_0_rgba(255,255,255,0.05),0_0.25rem_0.5rem_0_rgba(0,0,0,0.1)]"
                             } ${visible ? "px-3" : "px-5"}`
                         )}
-                        href={item.url}
+                        to={item.url}
                         key={index}
                     >
                         <Icon className={item.color} name={item.icon} />

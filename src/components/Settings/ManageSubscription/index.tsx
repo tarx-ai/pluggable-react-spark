@@ -31,7 +31,7 @@ const ManageSubscription = () => {
                 <div className="flex space-x-3">
                     <Link 
                         className="btn-stroke-light flex-1 text-center"
-                        href="/pricing"
+                        to="/pricing"
                     >
                         Change Plan
                     </Link>

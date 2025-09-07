@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 import { useLayoutState } from "./useLayoutState";
 import { mcpClient } from "@/lib/mcp/client";
 import { showToast } from "@/lib/ui/toast";

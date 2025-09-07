@@ -119,7 +119,7 @@ const RightSidebar = ({ className, visible, onToggle }: RightSidebarProps) => {
                     )}
                 </div>
                 <div className="absolute left-0 right-0 bottom-0 p-6">
-                    <Link className="btn-blue w-full" href="/">
+                    <Link className="btn-blue w-full" to="/">
                         <Icon name="plus" />
                         <span>New chat</span>
                     </Link>

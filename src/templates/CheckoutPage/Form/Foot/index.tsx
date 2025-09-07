@@ -24,7 +24,7 @@ const Foot = ({}: FootProps) => (
             {/* <button className="btn-blue" type="submit">
                 Start Brainwave Enterprise plan
             </button> */}
-            <Link href="/thanks" className="btn-blue md:w-full" type="submit">
+            <Link to="/thanks" className="btn-blue md:w-full" type="submit">
                 Start Brainwave Enterprise plan
             </Link>
         </div>

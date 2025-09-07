@@ -44,7 +44,7 @@ const ChatItem = ({ item }: ChatItemProps) => {
                     name="check"
                 />
             </button>
-            <Link className="block" href={item.url}>
+            <Link className="block" to={item.url}>
                 <div
                     className={`group py-3 pl-12 pr-3 rounded-xl transition-colors hover:bg-n-3/75 dark:hover:bg-n-5 ${
                         active && "bg-n-3/75 dark:bg-n-5"

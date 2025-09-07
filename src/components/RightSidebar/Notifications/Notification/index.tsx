@@ -8,7 +8,7 @@ type NotificationProps = {
 const Notification = ({ item }: NotificationProps) => (
     <Link
         className="flex items-center p-4 rounded-xl transition-colors hover:bg-n-2 md:hover:bg-transparent md:p-0 dark:hover:bg-n-6 dark:md:hover:bg-transparent"
-        href={item.url}
+        to={item.url}
     >
         <div className="relative shrink-0 w-15 h-15 md:w-12 md:h-12">
             <Image

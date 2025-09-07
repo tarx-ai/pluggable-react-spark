@@ -16,7 +16,7 @@ const Item = ({ item }: ItemProps) => (
                 <Link
                     className="group relative flex items-center pl-5 py-5 pr-24 rounded-xl transition-colors hover:bg-n-3/50 md:!bg-transparent md:py-0 md:pl-0 md:pr-18 md:mb-6 md:last:mb-0 dark:hover:bg-n-6 dark:md:hover:bg-transparent"
                     key={x.id}
-                    href={x.url}
+                    to={x.url}
                 >
                     <div className="relative shrink-0 w-12 h-12">
                         <Image

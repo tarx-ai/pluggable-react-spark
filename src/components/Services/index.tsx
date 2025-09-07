@@ -17,7 +17,7 @@ const Services = ({}: ServicesProps) => (
             {navigation.map((item, index) => (
                 <Link
                     className="group flex items-center mt-2 ml-2 p-2 pr-4 border border-n-3 bg-n-1 rounded-full base1 font-semibold transition-shadow hover:shadow-[0_0_1rem_0.25rem_rgba(0,0,0,0.04),0_2rem_2rem_-1rem_rgba(0,0,0,0.12)] md:w-full dark:border-n-5/50 dark:bg-n-6 dark:transition-all dark:hover:bg-n-5"
-                    href={item.url || "#"}
+                    to={item.url || "#"}
                     key={index}
                 >
                     <div className="relative flex justify-center items-center w-10 h-10 mr-3">

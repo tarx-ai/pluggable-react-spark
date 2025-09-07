@@ -7,9 +7,11 @@ interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
     width?: number;
     height?: number;
     className?: string;
+    sizes?: string;
+    fill?: boolean;
 }
 
-const Image = ({ className, onLoad, ...props }: ImageProps) => {
+const Image = ({ className, onLoad, fill, sizes, ...props }: ImageProps) => {
     const [loaded, setLoaded] = useState(false);
 
     const handleLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
@@ -23,6 +25,7 @@ const Image = ({ className, onLoad, ...props }: ImageProps) => {
                 loaded && "opacity-100"
             } ${className}`}
             onLoad={handleLoad}
+            sizes={sizes}
             {...props}
         />
     );

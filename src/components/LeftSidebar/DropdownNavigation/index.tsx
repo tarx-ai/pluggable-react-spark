@@ -76,7 +76,7 @@ const DropdownNavigation = ({ sections, visible }: DropdownNavigationProps) => {
                                             to={item.url}
                                             className={twMerge(
                                                 "flex items-center justify-between px-3 py-2 rounded-lg hover:bg-n-6/30 transition-colors group",
-                                                pathname === item.url && "bg-gradient-to-l from-[#323337] to-[rgba(70,79,111,0.3)] shadow-[inset_0px_0.0625rem_0_rgba(255,255,255,0.05),0_0.25rem_0.5rem_0_rgba(0,0,0,0.1)]"
+                                                location.pathname === item.url && "bg-gradient-to-l from-[#323337] to-[rgba(70,79,111,0.3)] shadow-[inset_0px_0.0625rem_0_rgba(255,255,255,0.05),0_0.25rem_0.5rem_0_rgba(0,0,0,0.1)]"
                                             )}
                                         >
                                             <div className="flex items-center min-w-0 flex-1">

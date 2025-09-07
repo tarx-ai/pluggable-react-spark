@@ -10,14 +10,14 @@ import { applications } from "@/mocks/applications";
 
 const ApplicationsPage = () => {
     const [search, setSearch] = useState<string>("");
-    const router = useRouter();
+    const navigate = useNavigate();
 
     return (
         <Layout hideRightSidebar>
             <div className="p-10 md:pt-5 md:px-6 md:pb-10">
                 <button
                     className="hidden absolute top-6 right-6 w-10 h-10 border-2 border-n-4/25 rounded-full text-0 transition-colors hover:border-transparent hover:bg-n-4/25 md:block"
-                    onClick={() => router.back()}
+                    onClick={() => navigate(-1)}
                 >
                     <Icon className="fill-n-4" name="close" />
                 </button>

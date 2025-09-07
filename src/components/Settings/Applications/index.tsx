@@ -9,7 +9,7 @@ const Applications = ({}: ApplicationsProps) => (
     <>
         <div className="flex items-center mb-8">
             <div className="mr-auto h4">Applications</div>
-            <Link className="btn-blue" href="/applications">
+            <Link className="btn-blue" to="/applications">
                 Add apps
             </Link>
         </div>
