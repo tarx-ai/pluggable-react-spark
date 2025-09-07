@@ -1,7 +1,6 @@
-import type { NextPage } from "next";
 import PhotoEditingPage from "@/templates/PhotoEditingPage";
 
-const PhotoEditing: NextPage = () => {
+const PhotoEditing = () => {
     return <PhotoEditingPage />;
 };
 

@@ -1,7 +1,6 @@
-import type { NextPage } from "next";
 import VideoGenerationPage from "@/templates/VideoGenerationPage";
 
-const VideoGeneration: NextPage = () => {
+const VideoGeneration = () => {
     return <VideoGenerationPage />;
 };
 

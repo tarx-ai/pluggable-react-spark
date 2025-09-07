@@ -1,7 +1,6 @@
-import type { NextPage } from "next";
 import AudioGenerationPage from "@/templates/AudioGenerationPage";
 
-const AudioGeneration: NextPage = () => {
+const AudioGeneration = () => {
     return <AudioGenerationPage />;
 };
 

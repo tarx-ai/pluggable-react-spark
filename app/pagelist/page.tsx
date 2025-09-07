@@ -1,7 +1,6 @@
-import type { NextPage } from "next";
 import PageListPage from "@/templates/PageListPage";
 
-const PageList: NextPage = () => {
+const PageList = () => {
     return <PageListPage />;
 };
 

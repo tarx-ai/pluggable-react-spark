@@ -1,7 +1,6 @@
-import type { NextPage } from "next";
 import WorkspacePage from "@/templates/WorkspacePage";
 
-const Workspace: NextPage = () => {
+const Workspace = () => {
     return <WorkspacePage />;
 };
 

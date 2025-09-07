@@ -2,12 +2,12 @@
 
 import React, { useState } from "react";
 import { getTheme, setTheme, useTheme } from "@/lib/theme";
-import { Button } from "@/components/ui/Button";
-import { Input } from "@/components/ui/Input";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/Card";
-import { Badge } from "@/components/ui/Badge";
-import { Switch } from "@/components/ui/Switch";
-import { Checkbox } from "@/components/ui/Checkbox";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Switch } from "@/components/ui/switch";
+import { Checkbox } from "@/components/ui/checkbox";
 
 const DesignSystemPage = () => {
   const { theme, setTheme: changeTheme } = useTheme();

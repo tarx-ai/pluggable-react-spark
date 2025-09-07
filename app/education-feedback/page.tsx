@@ -1,7 +1,6 @@
-import type { NextPage } from "next";
 import EducationFeedbackPage from "@/templates/EducationFeedbackPage";
 
-const EducationFeedback: NextPage = () => {
+const EducationFeedback = () => {
     return <EducationFeedbackPage />;
 };
 

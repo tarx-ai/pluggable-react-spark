@@ -1,4 +1,4 @@
-import { useColorMode } from "@chakra-ui/react";
+import { useTheme } from "next-themes";
 import { twMerge } from "tailwind-merge";
 import Icon from "@/components/Icon";
 
@@ -7,7 +7,7 @@ type ToggleThemeProps = {
 };
 
 const ToggleTheme = ({ visible }: ToggleThemeProps) => {
-    const { colorMode, setColorMode } = useColorMode();
+    const { theme: colorMode, setTheme: setColorMode } = useTheme();
 
     const items = [
         {

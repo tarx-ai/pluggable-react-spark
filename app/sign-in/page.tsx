@@ -1,7 +1,6 @@
-import type { NextPage } from "next";
 import SignInPage from "@/templates/SignInPage";
 
-const SignIn: NextPage = () => {
+const SignIn = () => {
     return <SignInPage />;
 };
 

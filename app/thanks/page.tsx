@@ -1,7 +1,6 @@
-import type { NextPage } from "next";
 import ThanksPage from "@/templates/ThanksPage";
 
-const Thanks: NextPage = () => {
+const Thanks = () => {
     return <ThanksPage />;
 };
 

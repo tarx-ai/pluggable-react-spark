@@ -1,7 +1,6 @@
-import type { NextPage } from "next";
-import Layout from "@/components/Layout";
+import { Layout } from "@/components/Layout";
 
-const Features: NextPage = () => {
+const Features = () => {
     return (
         <Layout>
             <div className="grow px-10 py-20 overflow-y-auto scroll-smooth scrollbar-none 2xl:py-12 md:px-4 md:pt-0 md:pb-6">

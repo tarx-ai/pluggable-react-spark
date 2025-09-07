@@ -1,7 +1,6 @@
-import type { NextPage } from "next";
 import PricingPage from "@/templates/PricingPage";
 
-const Pricing: NextPage = () => {
+const Pricing = () => {
     return <PricingPage />;
 };
 

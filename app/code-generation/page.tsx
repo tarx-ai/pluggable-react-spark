@@ -1,7 +1,6 @@
-import type { NextPage } from "next";
 import CodeGenerationPage from "@/templates/CodeGenerationPage";
 
-const CodeGeneration: NextPage = () => {
+const CodeGeneration = () => {
     return <CodeGenerationPage />;
 };
 
